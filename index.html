@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="styelsheet" href="style.css"/>
+    <title>Admin Dashboard</title>
+    <style>
+   body{
+     /* height:100vh;*/
+      background-color:lightgray;
+    } 
+    *{
+      font-family:Roboto;
+      padding:0px;
+      margin:0px;
+      bottom:0px;
+    }
+  .sidebar{
+      background-color:rgba(44, 162, 255, 1);
+       text-align:left;
+       font-weight:900;
+       position:fixed;
+       top:0px;
+       bottom:0px;
+       width:max(35% , 180px);
+      max-width:280px; 
+      min-width:180px;
+      }
+      .sidebarhead img{
+        width:35px;
+        height:35px;
+      }
+      .sidebarhead p{
+        font-size:20px;
+      }
+      .sidebarbody img,
+      .sidebarfooter img{
+        height:23px;
+        width:23px;
+        margin-left:12px;
+      }
+      
+      .sidebarbody p,
+      .sidebarfooter p{
+        font-size:13px;
+      }
+    /* img{
+      width:16px;
+      height:16px;
+      margin-left:12px;
+    }*/
+     .sidebarhead p,
+     .sidebarbody p,
+     .sidebarfooter p{
+      margin-left:15px;
+      font-size:15px;
+    }
+    .sidebarhead p{
+      margin-left:11px;
+    }
+      .sidebar p{
+        color:white;
+      }
+      .sidebarline img,p{
+        display:inline-block;
+      }
+      .sidebarline{
+        display:flex;
+        align-items:center;
+      }
+      .sidebarhead{
+        margin-bottom:20px;
+      }
+      .sidebarbody,
+      .sidebarfooter{
+        margin-bottom:40px;
+      }
+      .sidebarline{
+        margin:9px 0px;
+      }
+      .sidebarhead img{
+          margin-left:4px;
+      }
+      .relativecontainer{
+        position: relative;
+        height:100vh;
+      }
+      /* HEADER SECTION */
+     .header{
+      display:grid;
+      grid-template-columns:1fr;
+      height: 12%;
+     /* grid-template-rows:10px 10px;*/
+      row-gap:10px;
+     position: fixed;
+      top:0;
+      left:0;
+      right:0;
+      left:min(280px , max(180px,35%));
+      box-shadow:0px 4px 6px rgba(0,0,0,0.1);
+    /* left:280px;*/
+     
+      background-color:white;
+      }
+      .headerSec1{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        /*padding-right:30px;*/
+      }
+      .Icon{
+      width:15px;
+      height:15px;
+      
+      }
+      .notifycationIcon{
+        width:15px;
+        height:15px;
+      }
+      input{
+        height:15px;
+        border-radius:6px;
+        width:55vw;
+        border:none;
+        background:rgb(194, 194, 194);
+      }
+      .profileImg{
+        width:23px;
+        height:23px;
+        border-radius:10px;
+      }
+      .userName{
+        font-size:0.6em;
+        font-weight:800;
+      }
+      /* MARGIN */
+      .searchIcon{
+        margin-left:15px;
+        margin-right:13px;
+      }
+      input{
+        flex:1;
+       max-width:350px;
+      width:clamp(50px, 35%, 350px);
+      }
+      /* DIV SECTION FLEX */
+      .headerSec1 div{
+        display:flex;
+        align-items:center;
+      }
+      .headerSec1 > div+div{
+        margin-left:25px;
+        column-gap: 18px;
+        justify-content:end;
+      }
+    /* HEADER SECTION 2 */
+    .headerSec2{
+      display:flex;
+      align-items:center;
+      padding-left:15px;
+    }
+    .headerSec2 div{
+      display:flex;
+      align-items:center;
+    }
+    .headerSec2  div:first-child{ 
+      column-gap:10px;
+     /* padding-left:11px;*/
+      flex:1;
+    }
+    .headerSec2>div+div{
+      width:100%;
+      flex:2;
+      height:100%;
+      column-gap:10px;
+      justify-content: end;
+    }
+    /* PADDING */
+    
+    .headerSec2,
+    .headerSec1{
+      padding-right:40px;
+    }
+    .headerSec2 div img{
+      height:33px;
+      width:33px;
+      border-radius: 15px;
+    }
+    .headerSec2 div p{
+      font-weight:800;
+      font-size:11px;
+    }
+   .headerSec2 span{
+     font-size:8px;
+   }
+   button{
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size:9px;
+    background-color:rgba(44, 162, 255, 1);
+    color:white;
+    border:none;
+    width:50px;
+   }
+    </style>
+  </head>
+  <body>
+  <div class="relativecontainer">
+    <div class="sidebar">
+      <div class="sidebarhead">
+       <div class="sidebarline">
+        <img src="dashboard (1).png" alt="websitelogo" />
+        <p>Dashboard</p>
+       </div>
+      </div>
+      <div class="sidebarbody">
+        <div class="sidebarline">
+            <img class="homeimg" src="home-button (1).png" />
+            <p>Home</p>
+        </div>
+        <div class="sidebarline">
+          <img src="account.png" alt="profile" />
+          <p>Profile</p>
+        </div>
+        <div class="sidebarline">
+          <img src="message.png" alt="message" />
+          <p>Messages</p>
+        </div>
+        <div class="sidebarline">
+          <img src="history.png" alt="history" />
+          <p>History</p>
+        </div>
+        <div class="sidebarline">
+          <img src="taskCircleIcon.png" alt="tasks" />
+          <p>Tasks</p>
+        </div>
+        <div class="sidebarline">
+          <img src="community.png" alt="community" />
+          <p>Communities</p>
+        </div>
+      </div>
+      <div class="sidebarfooter">
+        <div class="sidebarline">
+          <img src="settings.png" alt="setting" />
+          <p>Settings</p>
+        </div>
+        <div class="sidebarline">
+          <img src="support.png" alt="support" />
+          <p>Support</p>
+        </div>
+        <div class="sidebarline">
+          <img src="privacyLockIconCircle.png" alt="privacy" />
+          <p>Privacy</p>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <div class="header">
+    <div class="headerSec1">
+      <div>
+        <img src="header image folder/search.png" alt="search icon" class="searchIcon Icon" />
+        <input type="text" name="search" id="searchbar">
+     </div>
+     <div>
+        <img src="header image folder/notification.png" alt="notification icon" class="notifycationIcon Icon"/>
+        <img src="header image folder/profilePhoto.png" alt="profile image" class="profileImg"/>
+        <p class="userName">Harry Phishaph</p>
+     </div>    
+  </div>
+    
+  <div class="headerSec2">
+    <div>
+      <img src="header image folder/profilePhoto.png" alt="profile Image" />
+      <p><span>Hi there,</span><br>Harry Phishaph (@Hari)</p>
+    </div>
+    <div>
+      <button>New</button>
+      <button>Upload</button>
+      <button>Share</button>
+    </div>
+  </div>
+</div>
+  </body>
+</html>
