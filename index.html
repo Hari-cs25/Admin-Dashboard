@@ -2,18 +2,23 @@
 <html lang="eng">
   <head>
     <meta charset="utf-8"/>
-    <link rel="styelsheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css"/>
     <title>Admin Dashboard</title>
     <style>
+     
    body{
      /* height:100vh;*/
       background-color:lightgray;
+      padding-left:min(281px ,35%);
+      margin-top:0px;
+      padding-top:88px;
     } 
     *{
       font-family:Roboto;
       padding:0px;
       margin:0px;
       bottom:0px;
+      box-sizing:border-box;
     }
   .sidebar{
       background-color:rgba(44, 162, 255, 1);
@@ -22,6 +27,7 @@
        position:fixed;
        top:0px;
        bottom:0px;
+       left:0px;
        width:max(35% , 180px);
       max-width:280px; 
       min-width:180px;
@@ -96,8 +102,11 @@
       top:0;
       left:0;
       right:0;
+      height:88px;
       left:min(280px , max(180px,35%));
       box-shadow:0px 4px 6px rgba(0,0,0,0.1);
+      margin-bottom:0px;
+      padding-bottom:0px;
     /* left:280px;*/
      
       background-color:white;
@@ -120,9 +129,16 @@
       input{
         height:15px;
         border-radius:6px;
-        width:55vw;
         border:none;
         background:rgb(194, 194, 194);
+        width:clamp(200px, 25vw, 350px);
+        padding-left:10px;
+
+      }
+      input:focus{
+        outline:none;
+        cursor: pointer;
+
       }
       .profileImg{
         width:23px;
@@ -138,11 +154,7 @@
         margin-left:15px;
         margin-right:13px;
       }
-      input{
-        flex:1;
-       max-width:350px;
-      width:clamp(50px, 35%, 350px);
-      }
+     
       /* DIV SECTION FLEX */
       .headerSec1 div{
         display:flex;
@@ -202,10 +214,81 @@
     border:none;
     width:50px;
    }
+   .mainBody{
+    margin-top:1px;
+
+   }
+   .gridimg{
+    width:15px;
+    height:15px;
+    margin-right:10px;
+   }
+   .icons{
+    padding-right:1px;
+    margin:50px 0px 20px 0px;
+    gap:15px;
+    display:flex;
+    justify-content:end;
+    align-items:center;
+   }
+   .contentbox{
+    display:grid;
+    grid-template-columns:5px 1fr;
+    grid-template-rows:1fr;
+    background-color:white;
+   }
+   .contentbox > div{
+    box-sizing:border-box;
+    display:flex;
+    flex-direction:column;
+    justify-content:end;
+   }
+   .colorStraip{
+    background-color:orange;
+   }
+   .heading{
+    font-size:14px;
+    color:black;
+    font-weight:800;
+    padding-top:20px;
+    margin-left:13px;
+   }
+   .paraghraph{
+    font-size:12px;
+    color:gray;
+    width:360px;
+    margin-top:4px;
+    padding-left:13px;
+   }
+   .gridContainer1{
+    box-sizing:border-box;
+   /* height:auto;
+    width:auto;*/
+    display:inline-grid;
+    grid-template-columns: 400px 400px;
+    grid-template-rows:170px;
+    gap:20px;
+    margin-top:8px;
+    
+   }
+ .bodySec1{
+  display:inline-block;
+  padding:0px;
+  margin:0px;
+  /*margin:10px;
+  margin-right:0px;*/
+ }
+.gridTitle{
+  font-weight:600;
+  font-size:14px;
+  width:500px;
+  display:block;
+}
+   
     </style>
   </head>
   <body>
-  <div class="relativecontainer">
+
     <div class="sidebar">
       <div class="sidebarhead">
        <div class="sidebarline">
@@ -254,12 +337,13 @@
         </div>
       </div>
     </div>
-  </div>  
+  
+
   <div class="header">
     <div class="headerSec1">
       <div>
         <img src="header image folder/search.png" alt="search icon" class="searchIcon Icon" />
-        <input type="text" name="search" id="searchbar">
+        <input type="text" name="search" id="searchbar" >
      </div>
      <div>
         <img src="header image folder/notification.png" alt="notification icon" class="notifycationIcon Icon"/>
@@ -279,6 +363,176 @@
       <button>Share</button>
     </div>
   </div>
+</div>
+<div class="mainBody">
+
+<div class="bodySec1">
+
+  <p class="gridTitle">Your projects</p>
+
+     <div class="gridContainer1">
+          
+          <div class="contentbox">
+            <div class="colorStraip"></div>
+            <div>
+            <div class="heading">Super Cool Project</div>
+            <p class="paraghraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, ipsa fugiat. Accusantium, totam magni quas sapiente consequuntur ipsa blanditiis porro veniam vel.</p>
+            <div class="icons">
+              <img src="grid images\star.png" alt="star icon" class="gridimg">
+              <img src="grid images\eye.png" alt="eye icon" class="gridimg">
+              <img src="grid images\share.png" alt="share icon" class="gridimg">
+            </div>
+          </div>
+          </div>
+          
+
+          
+          <div class="contentbox">
+            <div class="colorStraip"></div>
+            <div>
+            <div class="heading">Less Cool Project</div>
+            <p class="paraghraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+               Facilis pariatur id quasi vero optio, cupiditate quam, quaerat a, repellat totam ut veritatis culpa iste.
+               Cumque nisi mollitia earum deleniti.
+               </p>
+            <div class="icons">
+               <img src="grid images\star.png" alt="star icon" class="gridimg">
+              <img src="grid images\eye.png" alt="eye icon" class="gridimg">
+              <img src="grid images\share.png" alt="share icon" class="gridimg">
+            </div>
+            </div>
+          </div>
+          
+
+          
+          <div class="contentbox">
+            <div class="colorStraip"></div>
+            <div>
+            <div class="heading">Impossible App</div>
+            <p class="paraghraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Nihil necessitatibus totam at quos aliquam harum possimus qui libero, tempore modi maxime veniam explicabo culpa deleniti officia voluptate.</p>
+            <div class="icons">
+               <img src="grid images\star.png" alt="star icon" class="gridimg">
+              <img src="grid images\eye.png" alt="eye icon" class="gridimg">
+              <img src="grid images\share.png" alt="share icon" class="gridimg">
+            </div>
+            </div>
+          </div>
+          
+
+          <div class="contentbox">
+            <div class="colorStraip"></div>
+            <div>
+            <div class="heading">Easy Peasy App</div>
+            <p class="paraghraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Nihil ullam eveniet dicta, fugiat odit odio placeat amet quidem sunt ipsa pariatu.
+               </p>
+            <div class="icons">
+               <img src="grid images\star.png" alt="star icon" class="gridimg">
+              <img src="grid images\eye.png" alt="eye icon" class="gridimg">
+              <img src="grid images\share.png" alt="share icon" class="gridimg">
+            </div>
+            </div>
+          </div>
+
+          <div class="contentbox">
+            <div class="colorStraip"></div>
+            <div>
+            <div class="heading">Ad Blocker</div>
+            <p class="paraghraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, beatae? Incidunt impedit tempora odio hic distinctio non libero eius ut unde labore nesciunt ea, aliquid, quod aut ipsum dolorum dolor.</p>
+            <div class="icons">
+               <img src="grid images\star.png" alt="star icon" class="gridimg">
+              <img src="grid images\eye.png" alt="eye icon" class="gridimg">
+              <img src="grid images\share.png" alt="share icon" class="gridimg">
+            </div>
+            </div>
+          </div>
+
+          <div class="contentbox">
+            <div class="colorStraip"></div>
+            <div>
+            <div class="heading">Money Maker</div>
+            <p class="paraghraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+               Sint odio eos eligendi nesciunt deleniti dolorem rem dolorum, beatae asperiores ex quasi? Quod atque dicta harum repellendus nobis voluptates? Provident, tempore!
+              Lorem ipsum dolor.</p>
+            <div class="icons">
+               <img src="grid images\star.png" alt="star icon" class="gridimg">
+              <img src="grid images\eye.png" alt="eye icon" class="gridimg">
+              <img src="grid images\share.png" alt="share icon" class="gridimg">
+            </div>
+            </div>
+          </div>
+          
+      </div>
+</div>
+
+<div class="aligncontainer">
+
+    <div class="bodySec2">
+
+      <p class="gridTitle">Announcements</p>
+
+      <div class="gridContainer2">
+
+        <div class="contentbox2">
+          <div class="heading2">Site Maintenance</div>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, sint magnam atque assumenda sunt numquam tempora nesciunt excepturi? Minima fuga amet ut adipisci!</p>
+      </div>
+
+        <div class="contentbox2">
+          <div class="heading2">Community Share Day</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eum odit culpa neque eos ipsum accusamus ea inventore quia tempore voluptates voluptate dolorum ipsa placeat pariatur facilis.</p>
+        </div>
+
+        <div class="contentbox2">
+          <div class="heading2">Update Privacy Policy</div>
+          <p id="last-p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, doloribus vitae. Facere mollitia, quisquam nemo explicabo voluptates, consequatur quis hic placeat praesentium iure odio rerum.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="bodySec3">
+
+      <p class="gridTitle">Trending</p>
+
+      <div class="gridContainer3">
+
+          <div class="contentbox3">
+            <img src="trending profile images\fox-img.jpg" alt="" class="profileImg" class="img2">
+            <p class="userDetaile">
+              <span>@tegan</span><br>
+              World Peace Builder
+            </p>
+          </div>
+
+          <div class="contentbox3">
+            <img src="header image folder\profilePhoto.png" alt="profile picture" class="img2">
+            <p class="userDetaile">
+              <span>@morgan</span><br>
+              Super Cool Project
+            </p>
+          </div>
+
+          <div class="contentbox3">
+            <img src="trending profile images\monkey-img.jpg" alt="" class="profileImg" class="img2">
+            <p class="userDetaile">
+              <span>@kendall</span><br>
+              Life Changing App
+            </p>
+          </div>
+
+          <div class="contentbox3">
+            <img src=" trending profile images\wolf-img.jpg" alt="" class="profileImg" class="img2">
+            <p class="userDetaile">
+              <span>@alex</span><br>
+              No Traffic Maker
+            </p>
+          </div>
+
+      </div>
+    </div>
+</div>
 </div>
   </body>
 </html>
